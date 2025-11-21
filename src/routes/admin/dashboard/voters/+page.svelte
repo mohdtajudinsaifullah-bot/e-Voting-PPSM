@@ -403,4 +403,5 @@
                   on:click={() => toggleExcoVote(candidate.id)}
                   disabled={!selectedVotes.exco.includes(candidate.id) && selectedVotes.exco.length >= 7}
                   class="text-left p-4 border-2 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed {
-                    selectedVotes.exco.includes(candidate.id)
+  selectedVotes.exco.includes(candidate.id) ? 'bg-green-100 border-green-500' : 'bg-white border-gray-300'
+}"
