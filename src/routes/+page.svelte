@@ -81,7 +81,7 @@
   /* Scrolling animation wrapper */
   .announcement-scroll {
     display: flex;
-    animation: scroll 30s linear infinite;
+    animation: scroll 20s linear infinite;
     white-space: nowrap;
   }
 
