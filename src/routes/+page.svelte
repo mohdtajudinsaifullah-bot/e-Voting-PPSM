@@ -1,3 +1,7 @@
+<script>
+  // No script needed for this page
+</script>
+
 <div style="padding: 3rem;">
   
   <!-- Logo Animated -->
@@ -20,10 +24,17 @@
     </p>
   </div>
 
-  <!-- Scrolling Announcement -->
-  <div style="background: #0ea5e9; color: white; padding: 1rem; overflow: hidden; border-radius: 12px;">
-    <div style="animation: scroll 20s linear infinite; white-space: nowrap;">
-      <span style="font-size: 1.25rem; font-weight: 600;">
+  <!-- Scrolling Announcement (IMPROVED) -->
+  <div class="announcement-container">
+    <div class="announcement-scroll">
+      <span class="announcement-text">
+        🗳️ Pengundian akan bermula pada 15 Disember 2024 | 
+        📢 Pastikan anda mendaftar sebagai pengundi | 
+        ✅ Hanya pengundi berdaftar sahaja yang boleh mengundi |
+        🎯 Sila pastikan maklumat anda adalah betul
+      </span>
+      <!-- Duplicate for seamless loop -->
+      <span class="announcement-text">
         🗳️ Pengundian akan bermula pada 15 Disember 2024 | 
         📢 Pastikan anda mendaftar sebagai pengundi | 
         ✅ Hanya pengundi berdaftar sahaja yang boleh mengundi |
@@ -35,13 +46,63 @@
 </div>
 
 <style>
+  /* Logo pulse animation */
   @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.05); }
+    0%, 100% { 
+      opacity: 1; 
+      transform: scale(1); 
+    }
+    50% { 
+      opacity: 0.8; 
+      transform: scale(1.05); 
+    }
   }
   
+  /* Scrolling text animation */
   @keyframes scroll {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% { 
+      transform: translateX(0); 
+    }
+    100% { 
+      transform: translateX(-50%); 
+    }
+  }
+
+  /* Announcement container styling */
+  .announcement-container {
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+    padding: 1rem 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  /* Scrolling animation wrapper */
+  .announcement-scroll {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    white-space: nowrap;
+  }
+
+  /* Announcement text styling */
+  .announcement-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    padding: 0 2rem;
+    display: inline-block;
+  }
+
+  /* Pause animation on hover */
+  .announcement-container:hover .announcement-scroll {
+    animation-play-state: paused;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .announcement-text {
+      font-size: 1rem;
+    }
   }
 </style>
