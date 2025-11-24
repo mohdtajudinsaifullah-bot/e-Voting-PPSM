@@ -24,21 +24,20 @@
     </p>
   </div>
 
-  <!-- Scrolling Announcement (IMPROVED) -->
+  <!-- SEAMLESS Scrolling Announcement -->
   <div class="announcement-container">
     <div class="announcement-scroll">
-      <span class="announcement-text">
-        🗳️ Pengundian akan bermula pada 15 Disember 2024 | 
-        📢 Pastikan anda mendaftar sebagai pengundi | 
-        ✅ Hanya pengundi berdaftar sahaja yang boleh mengundi |
-        🎯 Sila pastikan maklumat anda adalah betul
+      <span class="announcement-content">
+        🗳️ Pengundian akan bermula pada 15 Disember 2024&nbsp;&nbsp;|&nbsp;&nbsp;
+        📢 Pastikan anda mendaftar sebagai pengundi&nbsp;&nbsp;|&nbsp;&nbsp;
+        ✅ Hanya pengundi berdaftar sahaja yang boleh mengundi&nbsp;&nbsp;|&nbsp;&nbsp;
+        🎯 Sila pastikan maklumat anda adalah betul&nbsp;&nbsp;|&nbsp;&nbsp;
       </span>
-      <!-- Duplicate for seamless loop -->
-      <span class="announcement-text">
-        🗳️ Pengundian akan bermula pada 15 Disember 2024 | 
-        📢 Pastikan anda mendaftar sebagai pengundi | 
-        ✅ Hanya pengundi berdaftar sahaja yang boleh mengundi |
-        🎯 Sila pastikan maklumat anda adalah betul
+      <span class="announcement-content">
+        🗳️ Pengundian akan bermula pada 15 Disember 2024&nbsp;&nbsp;|&nbsp;&nbsp;
+        📢 Pastikan anda mendaftar sebagai pengundi&nbsp;&nbsp;|&nbsp;&nbsp;
+        ✅ Hanya pengundi berdaftar sahaja yang boleh mengundi&nbsp;&nbsp;|&nbsp;&nbsp;
+        🎯 Sila pastikan maklumat anda adalah betul&nbsp;&nbsp;|&nbsp;&nbsp;
       </span>
     </div>
   </div>
@@ -58,17 +57,17 @@
     }
   }
   
-  /* Scrolling text animation */
-  @keyframes scroll {
+  /* Seamless scrolling animation */
+  @keyframes seamlessScroll {
     0% { 
-      transform: translateX(0); 
+      transform: translateX(0%); 
     }
     100% { 
       transform: translateX(-50%); 
     }
   }
 
-  /* Announcement container styling */
+  /* Announcement container */
   .announcement-container {
     background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
     padding: 1rem 0;
@@ -78,30 +77,31 @@
     position: relative;
   }
 
-  /* Scrolling animation wrapper */
+  /* Scrolling wrapper - THE KEY! */
   .announcement-scroll {
-    display: flex;
-    animation: scroll 20s linear infinite;
+    display: inline-flex;
+    animation: seamlessScroll 15s linear infinite;
     white-space: nowrap;
+    will-change: transform;
   }
 
-  /* Announcement text styling */
-  .announcement-text {
+  /* Content styling */
+  .announcement-content {
     font-size: 1.25rem;
     font-weight: 600;
     color: white;
-    padding: 0 2rem;
     display: inline-block;
+    padding-right: 0;
   }
 
-  /* Pause animation on hover */
+  /* Pause on hover */
   .announcement-container:hover .announcement-scroll {
     animation-play-state: paused;
   }
 
-  /* Responsive adjustments */
+  /* Responsive */
   @media (max-width: 768px) {
-    .announcement-text {
+    .announcement-content {
       font-size: 1rem;
     }
   }
