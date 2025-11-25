@@ -19,8 +19,8 @@
       Selamat Datang
     </h2>
     <p style="font-size: 1.5rem; line-height: 1.75; color: #6b7280;">
-      Sistem E-Voting Persatuan Penolong Pegawai Syariah Malaysia (PPSM). 
-      Sila gunakan menu di sebelah kiri untuk navigasi.
+      Sistem E-Voting Persatuan Pegawai Syariah Malaysia (PPSM). 
+      Sila gunakan menu di sebelah kiri untuk tindakan atau capaian maklumat.
     </p>
   </div>
 
