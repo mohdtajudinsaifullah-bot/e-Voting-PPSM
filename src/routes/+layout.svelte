@@ -44,6 +44,7 @@
         {:else}
           <a href="/">home</a>
           <a href="/register">Daftar Pengundi</a>
+          <a href="/usul">Usul/ Cadangan</a>
           <a href="/candidates">Senarai Pencalonan</a>
           <a href="/nominate">Hantar Pencalonan</a>
           <a href="/vote">Pengundian</a>
